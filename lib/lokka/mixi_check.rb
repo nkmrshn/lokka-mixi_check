@@ -18,6 +18,8 @@ module Lokka
   module Helpers
     def mixi_check(url = nil)
       key = Option.mixi_check_key
+      return if key.blank?
+
       button = Option.mixi_check_button
       button_type = Option.mixi_check_button_type
       button += '.' + button_type if !button.blank? && !button_type.blank? 
