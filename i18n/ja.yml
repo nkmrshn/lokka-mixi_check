@@ -13,6 +13,6 @@ mixi_check_button_type_gif: GIF
 mixi_check_optional: 任意
 mixi_check_xmlns: meta要素を追加
 mixi_check_xmlns_none: しない
-mixi_check_xmlns_og: og (http://ogp.me/ns#)
-mixi_check_xmlns_mixi: mixi (http://mixi-platform.com/ns#)
+mixi_check_xmlns_og: og (xmlns:og="http://ogp.me/ns#")
+mixi_check_xmlns_mixi: mixi (xmlns:mixi="http://mixi-platform.com/ns#")
 mixi_check_notice: " : 追加する場合は、html要素にxmlns属性を追加してください"

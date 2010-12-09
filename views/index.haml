@@ -27,8 +27,10 @@
     %br
     %input{:type => 'radio', :id => 'mixi_check_xmlns_none', :name => 'mixi_check_xmlns', :value => '', :checked => Option.mixi_check_xmlns.blank?}
     %label{:for => 'mixi_check_xmlns_none'}= t.mixi_check_xmlns_none
+    %br
     %input{:type => 'radio', :id => 'mixi_check_xmlns_og', :name => 'mixi_check_xmlns', :value => 'og', :checked => Option.mixi_check_xmlns == 'og'}
     %label{:for => 'mixi_check_xmlns_og'}= t.mixi_check_xmlns_og
+    %br
     %input{:type => 'radio', :id => 'mixi_check_xmlns_mixi', :name => 'mixi_check_xmlns', :value => 'mixi', :checked => Option.mixi_check_xmlns == 'mixi'}
     %label{:for => 'mixi_check_xmlns_mixi'}= t.mixi_check_xmlns_mixi
   .field
