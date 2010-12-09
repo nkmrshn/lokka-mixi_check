@@ -25,4 +25,4 @@ Notice
 
 Before you use this plugin, you need to register your app at mixi [Developer Dashboard](https://sap.mixi.jp/) and get the Check Key.
 
-Also, if you want to specify the title and description, please add xmlns to html tag and insert meta tags inside the head tag. For more details, please read the [Technology Specification](http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check) in mixi Developer Center.
+Also, if you want to specify the title and description, please add a xmlns property to the html element. For more details, please read the [Technology Specification](http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check) in mixi Developer Center.

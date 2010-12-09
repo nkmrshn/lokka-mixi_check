@@ -23,4 +23,4 @@ Lokka mixi Check
 
 このプラグインをご使用になる前に、mixiの[Developer Dashboard](https://sap.mixi.jp/)でアプリを登録し、チェックキーを取得する必要があります。
 
-また、タイトルや説明文を指定したい場合は、htmlタグに名前区間(xmlns)を、headタグ内にmetaタグを挿入してください。詳しくは、mixi Developer Centerの[技術仕様](http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check)をご覧ください。
+また、タイトルや説明文を指定したい場合は、html要素にxmlns属性を追加してください。詳しくは、mixi Developer Centerの[技術仕様](http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check)をご覧ください。
