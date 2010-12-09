@@ -11,5 +11,8 @@ mixi_check_button_type: Button image type
 mixi_check_button_type_png: PNG
 mixi_check_button_type_gif: GIF
 mixi_check_optional: Optional
-mixi_check_notice: If you want to specify the title and description, please add xmlns to html tag and insert meta tags inside the head tag. For more details, please read the Technology Specification in mixi Developer Center.
-mixi_check_notice_tech: Technology Specification << mixi Developer Center
+mixi_check_xmlns: Add meta elements
+mixi_check_xmlns_none: none
+mixi_check_xmlns_og: og (http://ogp.me/ns#)
+mixi_check_xmlns_mixi: mixi (http://mixi-platform.com/ns#)
+mixi_check_notice: " : If you select other than 'none', add xmlns property in the html element."

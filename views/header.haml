@@ -1,0 +1,2 @@
+%meta{:property => "#{Option.mixi_check_xmlns}:title", :content => "#{@entry.title}"}
+%meta{:proerpty => "#{Option.mixi_check_xmlns}:description", :content =>"#{@entry.body.gsub(/<\/?[^>]*>/, '').jleft(80)}"}

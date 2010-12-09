@@ -1,6 +1,16 @@
 module Lokka
   module MixiCheck
     def self.registered(app)
+      app.before do
+         path = request.env['PATH_INFO']
+
+         if /^\/([0-9a-zA-Z-]+)$/ =~ path && !Option.mixi_check_xmlns.blank?
+           content_for :header do
+             haml :"plugin/lokka-mixi_check/views/header", :layout => false
+           end
+         end
+      end
+
       app.get '/admin/plugins/mixi_check' do
         haml :"plugin/lokka-mixi_check/views/index", :layout => :"admin/layout"
       end 
@@ -37,3 +47,16 @@ module Lokka
     end
   end
 end
+
+class String
+  def jleft(len)
+    return "" if len <= 0
+
+    str = self[0,len]
+    if /.\z/ !~ str
+      str[-1,1] = ''
+    end
+    str
+  end
+end
+
