@@ -16,3 +16,6 @@ mixi_check_xmlns_none: しない
 mixi_check_xmlns_og: og (xmlns:og="http://ogp.me/ns#")
 mixi_check_xmlns_mixi: mixi (xmlns:mixi="http://mixi-platform.com/ns#")
 mixi_check_notice: " : 追加する場合は、html要素にxmlns属性を追加してください"
+mixi_check_notice: 次のヘルパをテーマのテンプレートに追加してください：
+mixi_check_notice_1: 'html要素に"html_properties"ヘルパ。 例) &lt;html&lt;%= html_properties %&gt;&gt;'
+mixi_check_notice_2: 'head要素に"header"ヘルパ。'

@@ -8,6 +8,14 @@ module Lokka
            content_for :header do
              haml :"plugin/lokka-mixi_check/views/header", :layout => false
            end
+           
+           content_for :html_properties do
+             if Option.mixi_check_xmlns == 'og'
+               ' xmlns:og="http://ogp.me/ns#"'
+             elsif Option.mixi_check_xmlns == 'mixi'
+               ' xmlns:mixi="http://mixi-platform.com/ns#"'
+             end
+           end
          end
       end
 
@@ -26,6 +34,11 @@ module Lokka
   end
 
   module Helpers
+    def html_properties 
+      s = yield_content :html_properties
+      s unless s.blank?
+    end
+
     def mixi_check(url = nil)
       key = Option.mixi_check_key
       return if key.blank?

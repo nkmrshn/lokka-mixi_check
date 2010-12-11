@@ -15,4 +15,6 @@ mixi_check_xmlns: Add meta elements
 mixi_check_xmlns_none: none
 mixi_check_xmlns_og: og (xmlns:og="http://ogp.me/ns#")
 mixi_check_xmlns_mixi: mixi (xmlns:mixi="http://mixi-platform.com/ns#")
-mixi_check_notice: " : If you select other than 'none', add xmlns property in the html element."
+mixi_check_notice: "Add following helpers into you theme template:"
+mixi_check_notice_1: '"html_properties" helper in the html element. ex) &lt;html&lt;%= html_properties %&gt;&gt;'
+mixi_check_notice_2: '"header" helper in the head element.'
