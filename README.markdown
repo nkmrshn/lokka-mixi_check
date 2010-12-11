@@ -25,7 +25,7 @@ Notice
 
 Before you use this plugin, you need to register your app at mixi [Developer Dashboard](https://sap.mixi.jp/) and get the Check Key.
 
-Also, if you want to specify the title and description, to add a xmlns property to the html element, please add "html_properties" helpermethod to html element:
+Also, if you want to specify the title and description, to add a xmlns property to the html element, please add "html_properties" helper method to html element:
 
     <html<%= html_properties %>
 
