@@ -23,20 +23,4 @@
     %input{:type => 'radio', :id => 'mixi_check_button_type_gif', :name => 'mixi_check_button_type', :value => 'gif', :checked => Option.mixi_check_button_type == 'gif'}
     %label{:for => 'mixi_check_button_type_gif'}= t.mixi_check_button_type_gif
   .field
-    %label{:for => 'mixi_check_xmlns'}= t.mixi_check_xmlns + " (#{t.mixi_check_optional})"
-    %br
-    %input{:type => 'radio', :id => 'mixi_check_xmlns_none', :name => 'mixi_check_xmlns', :value => '', :checked => Option.mixi_check_xmlns.blank?}
-    %label{:for => 'mixi_check_xmlns_none'}= t.mixi_check_xmlns_none
-    %br
-    %input{:type => 'radio', :id => 'mixi_check_xmlns_og', :name => 'mixi_check_xmlns', :value => 'og', :checked => Option.mixi_check_xmlns == 'og'}
-    %label{:for => 'mixi_check_xmlns_og'}= t.mixi_check_xmlns_og
-    %br
-    %input{:type => 'radio', :id => 'mixi_check_xmlns_mixi', :name => 'mixi_check_xmlns', :value => 'mixi', :checked => Option.mixi_check_xmlns == 'mixi'}
-    %label{:for => 'mixi_check_xmlns_mixi'}= t.mixi_check_xmlns_mixi
-  .field
-    %label= t.mixi_check_notice
-    %ul
-      %li= t.mixi_check_notice_1
-      %li= t.mixi_check_notice_2
-  .field
     %input{:type => 'submit', :value => t.edit}

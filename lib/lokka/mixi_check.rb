@@ -2,21 +2,13 @@ module Lokka
   module MixiCheck
     def self.registered(app)
       app.before do
-         path = request.env['PATH_INFO']
+        path = request.env['PATH_INFO']
 
-         if /^\/([0-9a-zA-Z-]+)$/ =~ path && !Option.mixi_check_xmlns.blank?
-           content_for :header do
-             haml :"plugin/lokka-mixi_check/views/header", :layout => false
-           end
-           
-           content_for :html_properties do
-             if Option.mixi_check_xmlns == 'og'
-               ' xmlns:og="http://ogp.me/ns#"'
-             elsif Option.mixi_check_xmlns == 'mixi'
-               ' xmlns:mixi="http://mixi-platform.com/ns#"'
-             end
-           end
-         end
+        if /^\/([0-9a-zA-Z-]+)$/ =~ path
+          content_for :header do
+            haml :"plugin/lokka-mixi_check/views/header", :layout => false
+          end
+        end
       end
 
       app.get '/admin/plugins/mixi_check' do
@@ -43,12 +35,13 @@ module Lokka
       key = Option.mixi_check_key
       return if key.blank?
 
+      url = "#{env['rack.url_scheme']}://#{env['HTTP_HOST']}#{env['SCRIPT_NAME']}#{env['PATH_INFO']}" if url.blank?
+
       button = Option.mixi_check_button
       button_type = Option.mixi_check_button_type
       button += '.' + button_type if !button.blank? && !button_type.blank? 
 
-      opts = {'data-key' => key}
-      opts['data-url'] = url unless url.blank?
+      opts = {'data-key' => key, 'data-url' => url}
       opts['data-button'] = button unless button.blank?
 
       data = []
