@@ -17,7 +17,7 @@ module Lokka
 
       app.put '/admin/plugins/mixi_check' do
         params.each_pair do |key, value|
-          eval("Option.#{key}='#{value}'")
+          eval("Option.#{key}='#{value}'") if key != '_method'
         end 
         flash[:notice] = t.mixi_check_updated
         redirect '/admin/plugins/mixi_check'
